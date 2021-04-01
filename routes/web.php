@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//auth user
+Route::get('dashbord', function () {
+    return view('panel.admin.dashbord');
+});
+Route::get('profile', function () {
+    return view('panel.profile');
+});
+//Admin
+Route::get('users', function () {
+    return view('panel.admin.users');
+});
+Route::get('students', function () {
+    return view('panel.admin.students');
+});
