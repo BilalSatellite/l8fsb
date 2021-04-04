@@ -15,7 +15,7 @@
         <li class="nav-item dropdown">
             <a class="nav-link group-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Welcome, <span> Bilal</span>.
+            Hi, <span> {{ auth()->user()->name }}</span>.
             <img src="img/avatar.png" class="rounded-circle z-depth-0" style="width: 35px; hight:35px" alt="avatar image">
         </a>
         <div class="dropdown-menu drop-menu" aria-labelledby="navbarDropdown">

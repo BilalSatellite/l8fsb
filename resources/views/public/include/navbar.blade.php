@@ -52,12 +52,12 @@
                 <li class="nav-item dropdown ">
                     <a class="nav-link group-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Welcome, <span> Bilal</span>.
+                        Welcome, <span> {{ auth()->user()->name }}</span>.
                         <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg"
                             class="rounded-circle z-depth-0" alt="avatar image">
                     </a>
                     <div class="dropdown-menu drop-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item drop-itemdh" href="{{ route('dashbord') }}">Dashbord</a>
+                        <a class="dropdown-item drop-itemdh" href="{{ url('dashbord') }}">Dashbord</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item drop-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();

@@ -16,7 +16,7 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Bilal Khatri</h3>
+                <h3 class="profile-username text-center">{{ auth()->user()->name }}</h3>
 
                 <p class="text-muted text-center">Admin</p>
 
@@ -85,7 +85,7 @@
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
                   <li class="nav-item"><a class="nav-link active" href="#user-info" data-toggle="tab">User Info</a></li>
-                  
+
                   <li class="nav-item"><a class="nav-link" href="#student-info" data-toggle="tab">Student Info</a></li>
                 </ul>
               </div><!-- /.card-header -->
@@ -105,10 +105,10 @@
                             <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                           </div>
                         </div>
-                        
+
                         <div class="form-group row">
                           <div class="offset-sm-2 col-sm-10">
-                            
+
                           </div>
                         </div>
                         <div class="form-group row">
@@ -118,7 +118,7 @@
                         </div>
                       </form>
                   </div>
-                  
+
 
                   <div class="tab-pane" id="student-info">
                     <form class="form-horizontal">
