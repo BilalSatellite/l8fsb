@@ -9,46 +9,46 @@
     <title>{{ config('app.name', 'Laravel') }}|@yield('tital')</title>
 
     {{-- <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/adminlte.min.js') }}" defer></script> --}}
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/adminlte.min.js') }}" defer></script> --}}
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/adminlte.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/adminlte.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-</head>
-<body class="antialiased">
-    <!-- Navigation fixed-top-->
-    @include('public.include.navbar')
-    <!-- Navigation end-->
-    @include('public.include.login_register')
-    @yield('content')
+    </head>
+    <body class="antialiased">
+        <!-- Navigation fixed-top-->
+        @include('public.include.navbar')
+        <!-- Navigation end-->
+        @switch(Route::current()->getName())
+        @case('login')
+            @yield('login')
+            @break
+        @case('register')
 
+            @yield('register')
+            @break
+        @case('password.request')
 
- <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" ></script>
-    <script src="{{ asset('js/adminlte.min.js') }}" ></script>
-    @if(Route::current()->getName() == 'login')
-    <script>
-        $(function() {
-            $('#LoginModal').modal('toggle');
-        });
-    </script>
-@endif
-@if(Route::current()->getName() == 'register')
-<script>
-    $(function() {
-        $('#RegisterModal').modal('toggle');
-    });
-</script>
-@endif
-</body>
+            @yield('forgot-password')
+            @break
+        @default
+            @yield('content')
+        @endswitch
 
-</html>
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" ></script>
+        <script src="{{ asset('js/adminlte.min.js') }}" ></script>
+
+        @yield('scripts')
+    </body>
+
+    </html>

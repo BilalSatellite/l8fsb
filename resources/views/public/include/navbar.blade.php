@@ -86,7 +86,7 @@
         @endif
         </div>
     </nav>
- <!-- Login Register Modal -->
+
 
 
     <!-- Navigation end-->
