@@ -1,0 +1,18 @@
+// text color
+$smb_text_color1: rgb(201, 0, 0);
+$smb_text_color2: rgb(255, 255, 255);
+$smb_text_color3: rgb(0, 0, 0);
+// background color
+$smb_bg_color1:rgb(201, 0, 0);
+$smb_bg_color2:rgb(255, 255, 255);
+// Text shadow
+$smb_text_shadow:  3px 3px 0 #000,
+                  -1px -1px 0 #000,
+                   1px -1px 0 #000,
+                  -1px 1px 0 #000,
+                   1px 1px 0 #000;
+$smb_text_shadow2:  3px 3px 0 rgb(255, 255, 255),
+                   -1px -1px 0 rgb(255, 255, 255),
+                    1px -1px 0 rgb(255, 255, 255),
+                   -1px 1px 0 rgb(255, 255, 255),
+                    1px 1px 0 rgb(255, 255, 255);

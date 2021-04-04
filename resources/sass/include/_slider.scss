@@ -1,0 +1,94 @@
+#smbslidebrand h1 {
+    color: $smb_text_color3;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 10px;
+    text-shadow: $smb_text_shadow2;
+    font-weight: bolder;
+  }
+
+  #smbslidebrand h4 {
+    color: $smb_text_color2;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 2px;
+    text-shadow: $smb_text_shadow;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    outline: blue;
+    background-color:$smb_bg_color1;
+    background-size: 50%, 50%;
+    border-radius: 50%;
+    border: 1px solid $smb_text_color2;
+  }
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid $smb_text_color2;
+    border-radius: 100%;
+
+  }
+
+  .carousel-indicators .active {
+    background-color: $smb_text_color1;
+
+  }
+  .vl {
+    border-left: 5px solid $smb_text_color1;
+    height: auto;
+
+  }
+//   url("../img/background/1.jpg")
+  #home_slider .slide1 {
+    // background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.400)),url("../img/background/1.jpg");
+    background-color: aliceblue;
+    background-size: cover;
+    background-position: 0px 50%;
+    background-repeat: no-repeat;
+  }
+  #home_slider .slide2 {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.400));
+    background-size: cover;
+    background-position: 0px 50%;
+    background-repeat: no-repeat;
+  }
+  #home_slider .slide3 {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.400));
+    background-size: cover;
+    background-position: 0px 50%;
+    background-repeat: no-repeat;
+  }
+
+  #home_slider .slide1 h3,
+  #home_slider .slide2 h3,
+  #home_slider .slide3 h3 {
+    color: $smb_text_color2;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-shadow: $smb_text_shadow;
+
+
+  }
+
+
+
+  @media only screen and (max-width: 991px) {
+    .vl {
+
+      border: none;
+    }
+
+    #home_slider .slide1 h3,
+    #home_slider .slide2 h3,
+    #home_slider .slide3 h3 {
+
+      font-size: 1rem;
+      line-height: 15px;
+      text-align: center;
+
+    }
+
+    .carousel-indicators {
+      display: none;
+    }
+  }

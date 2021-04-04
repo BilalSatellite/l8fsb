@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('public.welcome');
 });
+
+
 //auth user
-Route::get('dashbord', function () {
-    return view('panel.admin.dashbord');
+Route::group(['middleware' => ['auth','verified']], function () {
+
+    Route::get('dashbord', [UserController::class, 'dashbord'])->name('dashbord');
 });
-Route::get('profile', function () {
-    return view('panel.profile');
-});
+
+
+
 //Admin
-Route::get('users', function () {
-    return view('panel.admin.users');
-});
-Route::get('students', function () {
-    return view('panel.admin.students');
-});
+
+
