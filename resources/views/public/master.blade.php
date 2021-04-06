@@ -28,6 +28,9 @@
         <!-- Navigation fixed-top-->
         @include('public.include.navbar')
         <!-- Navigation end-->
+         <!-- header -->
+        @include('public.include.header')
+        <!-- END header -->
         @switch(Route::current()->getName())
         @case('login')
             @yield('login')
@@ -40,7 +43,12 @@
 
             @yield('forgot-password')
             @break
+        @case('password.reset')
+
+            @yield('reset-password')
+            @break
         @default
+
             @yield('content')
         @endswitch
 

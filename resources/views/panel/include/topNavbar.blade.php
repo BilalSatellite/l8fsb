@@ -16,12 +16,12 @@
             <a class="nav-link group-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Hi, <span> {{ auth()->user()->name }}</span>.
-            <img src="img/avatar.png" class="rounded-circle z-depth-0" style="width: 35px; hight:35px" alt="avatar image">
+            <img src="{{ asset('img/avatar.png') }}" class="rounded-circle z-depth-0" style="width: 35px; hight:35px" alt="avatar image">
         </a>
         <div class="dropdown-menu drop-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item drop-itemdh" href="{{ url('/dashbord') }}">Dashbord</a>
+            <a class="dropdown-item drop-itemdh" href="{{ route('dashbord') }}">Dashbord</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item drop-item" href="{{ url('/profile') }}">My profile</a>
+            <a class="dropdown-item drop-item" href="{{ route('profile') }}">My profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item drop-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();

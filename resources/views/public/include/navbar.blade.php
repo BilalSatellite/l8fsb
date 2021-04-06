@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="img/logo/smi.png" alt="Logo" style="width:40px;">
+            <img src="{{ asset('img/logo/smi.png') }}" alt="Logo" style="width:40px;">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -57,7 +57,9 @@
                             class="rounded-circle z-depth-0" alt="avatar image">
                     </a>
                     <div class="dropdown-menu drop-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item drop-itemdh" href="{{ url('dashbord') }}">Dashbord</a>
+                        <a class="dropdown-item drop-itemdh" href="{{ route('dashbord') }}">Dashbord</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item drop-itemdh" href="{{ route('profile') }}">My Profile</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item drop-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();

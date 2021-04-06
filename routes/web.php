@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Users\UserController;
+
+use App\Http\Controllers\Users\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,22 +21,9 @@ Route::get('/', function () {
 
 
 //auth user
-Route::group(['middleware' => ['auth','verified']], function () {
+Route::prefix('user')->middleware(['auth', 'verified'])->group(function () {
 
-    Route::resource('user', UserController::class);
-
-
-    //Route::resource('AuthUser', UserController::class);
+    Route::get('dashbord', [UsersController::class, 'dashbord'])->name('dashbord');
+    Route::get('profile', [UsersController::class, 'profile'])->name('profile');
 });
-Route::prefix('user')->group(function () {
-    Route::resource('User', UserController::class);
-});
-// Route::name('admin.')->group(function () {
-//     Route::get('/users', function () {
-//         // Route assigned name "admin.users"...
-//     })->name('users');
-// });
-
-//Admin
-
-
+//auth user
