@@ -20,9 +20,52 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
+                    <span class="border-top"></span>
                     <!-- <span class="border-top"></span> -->
                     <!-- <li class="nav-header text-center"><i class="fas fa-tasks"></i> Users Management</li> -->
+                    <li class="nav-item">
+                        <a href="{{ route('profile') }}" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
 
+                            <p>My Profile</p>
+                        </a>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a href="{{ route('accountsettings') }}" class="nav-link">
+                            <i class="nav-icon fas fa-users-cog"></i>
+                            <p>Account Settings</p>
+                        </a>
+                    </li> --}}
+
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-users-cog"></i>
+                          <p>
+                            Account Settings
+                            <i class="fas fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="{{ route('change-password') }}" class="nav-link">
+                              <i class="fas fa-key nav-icon"></i>
+                              <p>Change Password</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="{{ route('two-factor-authentication') }}" class="nav-link">
+                              <i class="fas fa-lock nav-icon"></i>
+                              <p>Two Factor Auth</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="pages/tables/jsgrid.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>jsGrid</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
                     <li class="nav-item ">
                         <a href="{{ url('/users') }}" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>

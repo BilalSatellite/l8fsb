@@ -16,6 +16,15 @@ class UsersController extends Controller
 
     public function profile()
     {
-        return view('panel.profile');
+        return view('panel.users.profile');
+    }
+
+    public function changepassword()
+    {
+        return view('panel.users.change-password');
+    }
+    public function twofactorauthentication()
+    {
+        return view('panel.users.two-factor-authentication');
     }
 }

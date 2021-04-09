@@ -20,10 +20,12 @@ Route::get('/', function () {
 });
 
 
-//auth user
-Route::prefix('user')->middleware(['auth', 'verified'])->group(function () {
+//auth user releted
+Route::prefix('user')->middleware(['auth','verified'])->group(function () {
 
     Route::get('dashbord', [UsersController::class, 'dashbord'])->name('dashbord');
     Route::get('profile', [UsersController::class, 'profile'])->name('profile');
+    Route::get('change-password', [UsersController::class, 'changepassword'])->name('change-password');
+    Route::get('two-factor-authentication', [UsersController::class, 'twofactorauthentication'])->name('two-factor-authentication');
 });
 //auth user

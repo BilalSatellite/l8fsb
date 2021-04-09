@@ -45,14 +45,14 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
-        Fortify::authenticateUsing(function (Request $request) {
-            $user = User::where('email', $request->email)->first();
+        // Fortify::authenticateUsing(function (Request $request) {
+        //     $user = User::where('email', $request->email)->first();
 
-            if ($user &&
-                Hash::check($request->password, $user->password)) {
-                return $user;
-            }
-        });
+        //     if ($user &&
+        //         Hash::check($request->password, $user->password)) {
+        //         return $user;
+        //     }
+        // });
         Fortify::loginView(function () {
 
             return view('public.welcome');
@@ -67,6 +67,18 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::resetPasswordView(function ($request) {
             return view('public.welcome', ['request' => $request]);
+        });
+
+        Fortify::verifyEmailView(function () {
+            return view('public.welcome');
+        });
+
+        Fortify::confirmPasswordView(function () {
+            return view('panel.users.two-factor-authentication');
+        });
+
+        Fortify::twoFactorChallengeView(function () {
+            return view('public.welcome');
         });
     }
 }

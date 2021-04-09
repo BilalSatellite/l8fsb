@@ -47,6 +47,14 @@
 
             @yield('reset-password')
             @break
+        @case('verification.notice')
+
+            @yield('verify-email')
+            @break
+        @case('two-factor.login')
+
+            @yield('two-factor-challenge')
+            @break
         @default
 
             @yield('content')

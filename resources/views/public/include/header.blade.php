@@ -10,7 +10,7 @@
                 <div class="container">
                     <div class="row">
                         <div id="smbslidebrand" class="col-md-6  text-center my-5">
-                            <div><img src="./img/logo/smi3.png"
+                            <div><img src="{{ asset('img/logo/smi3.png') }}"
                                     class="rounded mx-auto d-block animated flipInY delay-.5s "
                                     style="max-width: 40%; height: auto" alt="Satellite"></div>
                             <div>
@@ -41,7 +41,7 @@
                 <div class="container">
                     <div class="row">
                         <div id="smbslidebrand" class="col-md-6  text-center my-5">
-                            <div><img src="./img/logo/smi3.png"
+                            <div><img src="{{ asset('img/logo/smi3.png') }}"
                                     class="rounded mx-auto d-block animated flipInY delay-.5s "
                                     style="max-width: 40%; height: auto" alt="Satellite"></div>
                             <div>
@@ -69,7 +69,7 @@
                 <div class="container">
                     <div class="row">
                         <div id="smbslidebrand" class="col-md-6  text-center my-5">
-                            <div><img src="./img/logo/smi3.png"
+                            <div><img src="{{ asset('img/logo/smi3.png') }}"
                                     class="rounded mx-auto d-block animated flipInY delay-.5s "
                                     style="max-width: 40%; height: auto" alt="Satellite"></div>
                             <div>
