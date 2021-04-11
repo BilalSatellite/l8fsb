@@ -44,7 +44,12 @@
                             <h1 class="m-0">@yield('tital')</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                               <p> alert Masseges</p>
+                            @if (session('success_message'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('success_message') }}
+                            </div>
+                        @endif
+
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
@@ -63,6 +68,7 @@
 
     <script src="{{ asset('js/adminlte.min.js') }}"></script>
     @yield('scripts')
+
 </body>
 </html>
 

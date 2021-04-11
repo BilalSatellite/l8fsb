@@ -65,6 +65,7 @@
         <script src="{{ asset('js/adminlte.min.js') }}" ></script>
 
         @yield('scripts')
+
     </body>
 
     </html>

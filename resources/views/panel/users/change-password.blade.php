@@ -11,6 +11,7 @@
                         <label for="change-password" class="col-md-8 col-form-label text-md-left">{{ __('Change Password') }}</label>
                     </div><!-- /.card-header -->
                     <div class="card-body">
+
                         <form method="POST" action="{{ route('user-password.update') }}">
                             @csrf
                             @method('PUT')
@@ -19,7 +20,6 @@
                                     Password updated successfully.
                                 </div>
                             @endif
-
                             <div class="form-group row">
                                 <label for="current_password" class="col-md-4 col-form-label text-md-right">{{ __('Current Password') }}</label>
 

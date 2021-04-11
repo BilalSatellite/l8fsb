@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
+
 
 class UsersController extends Controller
 {
@@ -21,8 +25,12 @@ class UsersController extends Controller
 
     public function changepassword()
     {
+
         return view('panel.users.change-password');
     }
+
+
+
     public function twofactorauthentication()
     {
         return view('panel.users.two-factor-authentication');
