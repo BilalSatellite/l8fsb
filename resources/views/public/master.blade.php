@@ -65,6 +65,16 @@
         <script src="{{ asset('js/adminlte.min.js') }}" ></script>
 
         @yield('scripts')
+        <script>
+                $(function() {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Do you want to continue',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                        })
+                    });
+        </script>
 
     </body>
 
