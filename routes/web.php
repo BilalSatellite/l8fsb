@@ -1,7 +1,8 @@
 <?php
 
-
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Users\UsersController;
+
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 /*
@@ -29,4 +30,11 @@ Route::prefix('user')->middleware(['auth','verified'])->group(function () {
     Route::get('change-password', [UsersController::class, 'changepassword'])->name('change-password');
     Route::get('two-factor-authentication', [UsersController::class, 'twofactorauthentication'])->name('two-factor-authentication');
 });
-//auth user
+
+//Admin releted
+Route::prefix('admin')->middleware(['auth','verified'])->group(function () {
+
+    Route::resource('users', UserController::class);
+
+
+});
