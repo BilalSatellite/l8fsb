@@ -32,6 +32,9 @@
         <!-- Main Sidebar Container -->
         @include("panel.include.sideBar_main")
         <!-- / Main Sidebar Container -->
+        <!-- Flash Message -->
+        {{-- @include("panel.include.message") --}}
+        <!-- / Flash Message -->
 
         <!-- Content Wrapper. Contains page content -->
 
@@ -44,11 +47,11 @@
                             <h1 class="m-0">@yield('tital')</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                            @if (session('success_message'))
+                            {{-- @if (session('status'))
                             <div class="alert alert-success" role="alert">
-                                {{ session('success_message') }}
+                                {{ session('status') }}
                             </div>
-                        @endif
+                        @endif --}}
 
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -68,7 +71,7 @@
 
     <script src="{{ asset('js/adminlte.min.js') }}"></script>
     @yield('scripts')
-
+    @include('sweetalert::alert')
 </body>
 </html>
 

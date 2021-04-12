@@ -7,8 +7,7 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UsersController extends Controller
 {
@@ -25,7 +24,10 @@ class UsersController extends Controller
 
     public function changepassword()
     {
+        if (session('status') == "password-updated"){
 
+          Alert::success('Success', 'Password Change  Successfully.');
+       }
         return view('panel.users.change-password');
     }
 
@@ -33,6 +35,14 @@ class UsersController extends Controller
 
     public function twofactorauthentication()
     {
+        if (session('status') == "two-factor-authentication-enabled"){
+
+            Alert::success('Enable', 'Two factor Authentication has been enabled.');
+        }
+        if (session('status') == "two-factor-authentication-disabled"){
+
+            Alert::success('Disable', 'Two factor Authentication has been disabled.');
+        }
         return view('panel.users.two-factor-authentication');
     }
 }

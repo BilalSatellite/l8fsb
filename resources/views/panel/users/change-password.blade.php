@@ -15,11 +15,12 @@
                         <form method="POST" action="{{ route('user-password.update') }}">
                             @csrf
                             @method('PUT')
-                            @if (session('status') == "password-updated")
+                            {{-- @if (session('status') == "password-updated")
                                 <div class="alert alert-success">
-                                    Password updated successfully.
+                                   Password updated  successfully.
                                 </div>
-                            @endif
+                            @endif --}}
+
                             <div class="form-group row">
                                 <label for="current_password" class="col-md-4 col-form-label text-md-right">{{ __('Current Password') }}</label>
 

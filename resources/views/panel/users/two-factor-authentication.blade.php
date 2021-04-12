@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header p-2">
                         <label for="two-factor-authentication" class="col-form-label text-md-left">{{ __('Two Factor Authentication') }}</label>
-                        @if (session('status') == "two-factor-authentication-disabled")
+                        {{-- @if (session('status') == "two-factor-authentication-disabled")
                         <div class="alert alert-danger float-right" role="alert">
                             Two factor Authentication has been disabled.
                         </div>
@@ -19,7 +19,7 @@
                         <div class="alert alert-success float-right" role="alert">
                             Two factor Authentication has been enabled.
                         </div>
-                    @endif
+                    @endif --}}
                     </div><!-- /.card-header -->
                     <div class="card-body">
                     <form method="POST" action="/user/two-factor-authentication" >
@@ -82,7 +82,11 @@
 
                         <form method="POST" action="{{ route('password.confirm') }}">
                             @csrf
-
+                            {{-- @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif --}}
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
