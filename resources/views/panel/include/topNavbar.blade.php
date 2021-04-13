@@ -19,9 +19,9 @@
             <img src="{{ asset('img/avatar.png') }}" class="rounded-circle z-depth-0" style="width: 35px; hight:35px" alt="avatar image">
         </a>
         <div class="dropdown-menu drop-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item drop-itemdh" href="{{ route('dashbord') }}">Dashbord</a>
+            <a class="dropdown-item drop-itemdh" href="{{ route('user.dashbord') }}">Dashbord</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item drop-item" href="{{ route('profile') }}">My profile</a>
+            <a class="dropdown-item drop-item" href="{{ route('user.profile') }}">My profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item drop-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();

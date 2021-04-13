@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Users\UsersController;
-
+use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 /*
@@ -23,18 +22,18 @@ Route::get('/', function () {
 
 
 //auth user releted
-Route::prefix('user')->middleware(['auth','verified'])->group(function () {
+Route::name('user.')->middleware(['auth','verified'])->group(function () {
 
-    Route::get('dashbord', [UsersController::class, 'dashbord'])->name('dashbord');
-    Route::get('profile', [UsersController::class, 'profile'])->name('profile');
-    Route::get('change-password', [UsersController::class, 'changepassword'])->name('change-password');
-    Route::get('two-factor-authentication', [UsersController::class, 'twofactorauthentication'])->name('two-factor-authentication');
+    Route::get('dashbord', [UserController::class, 'dashbord'])->name('dashbord');
+    Route::get('profile', [UserController::class, 'profile'])->name('profile');
+    Route::get('change-password', [UserController::class, 'changepassword'])->name('change-password');
+    Route::get('two-factor-authentication', [UserController::class, 'twofactorauthentication'])->name('two-factor-authentication');
 });
 
 //Admin releted
-Route::prefix('admin')->middleware(['auth','verified'])->group(function () {
+Route::name('admin.')->middleware(['auth','verified'])->group(function () {
 
-    Route::resource('users', UserController::class);
+    Route::resource('users', UsersController::class);
 
 
 });

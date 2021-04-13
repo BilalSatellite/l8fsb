@@ -16,7 +16,7 @@
                     with font-awesome or any other icon font library -->
 
                 <li class="nav-item">
-                    <a href="{{ route('dashbord') }}" class="nav-link">
+                    <a href="{{ route('user.dashbord') }}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
@@ -25,7 +25,7 @@
                 <!-- <span class="border-top"></span> -->
                 {{-- <li class="nav-header text-center"><i class="fas fa-tasks"></i> Users Management</li> --}}
                 <li class="nav-item">
-                    <a href="{{ route('profile') }}" class="nav-link">
+                    <a href="{{ route('user.profile') }}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>My Profile</p>
                     </a>
@@ -47,13 +47,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('change-password') }}" class="nav-link">
+                            <a href="{{ route('user.change-password') }}" class="nav-link">
                                 <i class="fas fa-key nav-icon"></i>
                                 <p>Change Password</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('two-factor-authentication') }}" class="nav-link">
+                            <a href="{{ route('user.two-factor-authentication') }}" class="nav-link">
                                 <i class="fas fa-lock nav-icon"></i>
                                 <p>Two Factor Auth</p>
                             </a>
@@ -62,7 +62,7 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.users.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Users</p>
                     </a>

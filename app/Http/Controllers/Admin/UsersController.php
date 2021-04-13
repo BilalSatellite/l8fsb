@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-         //desc and asc
-       return view('panel.admin.users',['users' => User::orderBy('id','asc')->paginate(10)]);
+          //desc and asc
+       return view('panel.admin.users.users',['users' => User::orderBy('id','asc')->paginate(10)]);
     }
 
     /**

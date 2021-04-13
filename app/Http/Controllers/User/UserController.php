@@ -1,25 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     public function dashbord()
     {
-        return view('panel.users.dashbord');
+        return view('panel.user.dashbord');
     }
 
 
     public function profile()
     {
-        return view('panel.users.profile');
+        return view('panel.user.profile');
     }
 
     public function changepassword()
@@ -28,7 +25,7 @@ class UsersController extends Controller
 
           Alert::success('Success', 'Password Change  Successfully.');
        }
-        return view('panel.users.change-password');
+        return view('panel.user.change-password');
     }
 
 
@@ -43,6 +40,6 @@ class UsersController extends Controller
 
             Alert::success('Disable', 'Two factor Authentication has been disabled.');
         }
-        return view('panel.users.two-factor-authentication');
+        return view('panel.user.two-factor-authentication');
     }
 }
