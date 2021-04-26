@@ -76,7 +76,8 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::confirmPasswordView(function () {
 
-            return view('panel.users.two-factor-authentication');
+           return view('panel.user.two-factor-authentication');
+
         });
 
         Fortify::twoFactorChallengeView(function () {

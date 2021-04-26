@@ -14,7 +14,6 @@
                             Two factor Authentication has been disabled.
                         </div>
                     @endif
-
                     @if (session('status') == "two-factor-authentication-enabled")
                         <div class="alert alert-success float-right" role="alert">
                             Two factor Authentication has been enabled.
@@ -120,14 +119,11 @@
 @endsection
 @section('scripts')
 @if(Route::is('password.confirm'))
-@parent
+
 <script>
     $(function() {
-
         $('#ConfirmPassword').modal('toggle');
     });
-
 </script>
 @endif
 @endsection
-

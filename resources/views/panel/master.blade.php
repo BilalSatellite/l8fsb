@@ -70,8 +70,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     <script src="{{ asset('js/adminlte.min.js') }}"></script>
-    @yield('scripts')
     @include('sweetalert::alert')
+    @yield('scripts')
 </body>
 </html>
 
