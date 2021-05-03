@@ -28,12 +28,12 @@
                             @method('DElETE')
                         <div class="row">
                             <div class="pb-5 col-md-6 border border-dark">
-                                <p class="text-danger text-center">Scan QR Code your phone with ' google authenticator ' app or Use other authenticator app</p>
+                                <p class="text-danger text-center">Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application.</p>
                                 {!! auth()->user()->twoFactorQrCodeSvg() !!}
                             </div>
 
                             <div class="col-md-6  border border-dark">
-                                <p class="text-danger text-center">Copy Recovery Code your safe place</p>
+                                <p class="text-danger text-center">Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.</p>
 
                                 <ol>
                                     @foreach (json_decode(decrypt(auth()->user()->two_factor_recovery_codes)) as $code)
